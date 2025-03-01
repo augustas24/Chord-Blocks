@@ -1,0 +1,176 @@
+.all_sheets{
+    width: 100%;
+    /* height: 150vh; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    mask: linear-gradient(to bottom, 
+      rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 100%, 
+      rgba(0,0,0, 0) 0%, rgba(0,0,0, 0) 0
+  ) 100% 60% / 100% 100% repeat-x;
+    mask-size: 100% 75%;
+    mask-position: 100% 0%;
+    z-index: 1;
+    transition: mask 0.18s, scrollbar-color 0.18s;
+    
+    scrollbar-color: transparent transparent;
+}
+
+.all_sheets::-webkit-scrollbar {
+    width: 2.5vh;
+    opacity: 0%;
+    transition: opacity 0.18s;
+  }
+
+.all_sheets::-webkit-scrollbar-track {
+    background: rgb(86, 85, 77);
+    /* margin-top: -0.3vh; */
+  }
+  
+.all_sheets::-webkit-scrollbar-thumb {
+    background: rgb(204,176,163);
+  }
+  
+.all_sheets::-webkit-scrollbar-thumb:hover {
+    background: rgb(173, 148, 137);
+  }
+
+.all_sheets::-webkit-scrollbar-thumb:active {
+    background: rgb(204,176,163);
+}
+
+.complete_staff{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0%;
+    /* background-color: blue; */
+    /* padding-bottom: 0.9vh; Siste staff skal ha mer bottom-padding enn de andre staff'ene */
+}
+
+.staff{
+    margin-top: -1.4%;
+    /* padding-bottom: 7.2vh; */
+    width: 100%;
+    height: 16vh;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; */
+    
+    position: relative;
+    justify-content: space-evenly;
+    /* background-color: red; */
+
+    background-image: url('staff.png');
+    background-size:contain; /* Cover the entire area, maintaining aspect ratio */
+    background-position: center; /*  Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    }
+
+.block{
+    /* flex: 1; Denne justeres for å endre størrelsen til flexboxen avhengig av hvor mange taktslag den skal vare */
+    width: 18.5vh;
+    /* width: 18.5vh; */
+    height:115%;
+    /* position: absolute; */
+    margin: 6.9% 0% 0% 11.5%;
+
+    border: solid;
+    border-color: rgb(209, 184, 173);
+    border-width: 4px;
+
+    /* Oransje farger:
+    rgb(96, 237, 178);
+    rgb(255, 181, 115)
+    rgb(224, 159, 101) */
+
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+
+    cursor: pointer;
+
+    background-image: linear-gradient(to top left, rgba(255,0,0,0), rgb(196, 171, 160));
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+
+    box-shadow: 0px 3px 3px rgba(0, 0.2, 0.2 , 0.2);
+}
+
+.quarter_block, .half_block, .dotted_half_block, .whole_block, .empty_block{
+    height:115%;
+    margin-top: 6.9%;
+
+    border: solid;
+    border-color: rgb(209, 184, 173);
+    border-width: 4px;
+
+    /* Oransje farger:
+    rgb(96, 237, 178);
+    rgb(255, 181, 115)
+    rgb(224, 159, 101) */
+
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+
+    cursor: pointer;
+
+    background-image: linear-gradient(to top left, rgba(255,0,0,0), rgb(196, 171, 160));
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+
+    box-shadow: 0px 3px 3px rgba(0, 0.2, 0.2 , 0.2);
+}
+
+.quarter_block{
+    width: 18.5vh;  
+}
+
+.half_block{
+    width: 43.1vh;
+}
+
+.dotted_half_block{
+    width: 67.78vh;
+}
+
+.whole_block{
+    width: 92.4vh;
+}
+
+.empty_block{
+    width: 18.5vh;
+    border-color: rgb(187, 166, 156);
+    background-image: linear-gradient(to top left, rgba(255,0,0,0), rgb(94, 79, 73));
+}
+
+.quarter_block:hover, .half_block:hover, .dotted_half_block:hover, .whole_block:hover{
+    background-image: linear-gradient(to top left, rgba(255,0,0,0), rgb(217, 197, 189));
+}
+
+.empty_block:hover{
+    background-image: linear-gradient(to top left, rgba(255,0,0,0), rgb(120, 102, 95));
+}
+
+.quarter_block:active, .half_block:active, .dotted_half_block:active, .whole_block:active, .empty_block:active{
+    border-color: white;
+}
+
+.block::-webkit-scrollbar-track{
+    display: none;
+}
+
+/* .all_sheets:nth-child(0) > .complete_staff:nth-child(0) > .staff:nth-child(0) {
+    background-image: linear-gradient(to top left, rgba(255,0,0,0), rgb(224, 159, 101));
+} */

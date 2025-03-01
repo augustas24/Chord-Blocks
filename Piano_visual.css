@@ -1,0 +1,187 @@
+.scrollable{ /* change_octave og all_octaves er inne i denne */
+    width: 100%;
+    height: 34.5vh;
+
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    transition: scrollbar-color 0.18s;
+}
+
+.scrollable::-webkit-scrollbar { /* så scrollbar er usynlig */
+    height: 30vh;
+    /* background: transparent; */
+    display: none;
+    margin-bottom: -10%;
+}
+
+/* .scrollable::-webkit-scrollbar-thumb {
+    background: transparent; /* Optionally make the scrollbar thumb background transparent */
+  /* } */
+
+.edges_and_vertical_container {
+    width: 146.3%;
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical_container{  /* for change_octave, all_octaves og bottom.png */
+    width: 100%;
+    height: 45.5vh;
+
+    display: flex;
+    flex-direction: column;
+    /* background-color: crimson; */
+}
+
+.change_octave{
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+
+    /* background-color: green; */
+    margin-top: 0.05%;
+
+    /* background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(0, 0, 0)); */
+}
+
+.change_octave:hover{
+    cursor: pointer;
+}
+
+.octave_text{ /* fiks til slutt */
+    position: absolute;
+    font-family: Roboto;
+    /* color: rgb(222, 189, 175); */
+    /* opacity: 0.4; */
+}
+
+/* .octave_text:active{
+    color: white;
+} */
+
+.left_octave_button{
+    width: 11.3vh;
+    height: 100%;
+}
+
+.octave_button{
+    width: 50%;
+    height: 100%;
+}
+
+.right_octave_button{
+    width: 5.4vh;
+    height: 100%;
+}
+
+.octave_button:hover, .left_octave_button:hover, .right_octave_button:hover {
+    filter: brightness(1.4);
+}
+
+.octave_button:hover .octave_text {
+    color: rgb(205, 154, 151);
+}
+
+.selected_octave_button{
+    filter: brightness(1.3);
+}
+
+.all_octaves{
+    width: 100%;
+    height: 60.5%;
+    
+    display: flex;
+    flex-direction: row;
+
+    background-color: black;
+    justify-content: center;
+    column-gap: 11.56%;
+
+    /* cursor: move; */
+}
+
+.piano_octave_right{
+    margin-right: -7.75%;
+}
+
+.piano_octave{
+    width: 20%;
+}
+
+.white_keys_left{
+    position: absolute;
+    width: 5.22%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.white_keys{ /* alternativt middle_octave */
+    position: absolute;
+    width: 18.25%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 0%;
+}
+
+.white_keys_right{
+    position: absolute;
+    width: 2.61%;
+}
+
+.white_key{
+    width: 100%;
+}
+
+.black_keys {
+    position: absolute;
+    width: 12.3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.black_keys_left{
+    position: absolute;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.Db,.Eb, .Gb, .Ab, .Bb, .Bb_left {
+    margin-top: -3%;
+    width: 60%;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0 , 0.1);
+}
+
+.Db{
+    grid-column: 1;
+    margin-left: 75%;
+}
+
+.Eb{
+    grid-column: 2;
+    margin-left: 83%;
+}
+
+.Gb{
+    grid-column: 3;
+    margin-left: 194%;
+}
+
+.Ab{
+    grid-column: 4;
+    margin-left: 200%;
+}
+
+.Bb{
+    grid-column: 5;
+    margin-left: 207%;
+}
+
+.Bb_left{
+    grid-column: 1;
+    margin-left: 75%;
+}

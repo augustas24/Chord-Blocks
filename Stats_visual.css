@@ -1,0 +1,16 @@
+.utility_states {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2.4vh;
+    margin-left: -2.7vh;
+    width: 98.5%;
+    height: 2.8vh;
+    opacity: 0%;
+    transition: opacity 0.18s;
+    z-index: 3;
+}
+
+ .upper:hover .utility_states {
+    opacity: 100%;
+}

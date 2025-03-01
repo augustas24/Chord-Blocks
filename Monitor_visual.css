@@ -1,0 +1,390 @@
+.monitor{
+    width: 85%;
+    margin-bottom: -0.05%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    z-index: 1;
+
+    filter: blur(0.3px);
+}
+
+.info_text{
+    display: inline-block;
+    position: absolute;
+
+    color: rgb(113, 218, 242);
+    border-bottom: 2px solid rgb(113, 218, 242);
+    /* background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(113, 218, 242)); */
+    
+    width: 58%;
+    height: 22%;
+    margin-top: 0.4%;
+    text-align: center;
+    font-size: 90%;
+    white-space: nowrap;
+    overflow: visible;
+
+    z-index: 2;
+}
+
+.info_text:hover .action_panel {
+    display: flex;
+    animation-play-state:running;
+}
+
+/* .info_text:active .action_panel{
+    display: none;
+} */
+
+.action_panel{
+    width: 100%;
+    padding-top: 0.2%;
+    height: 16.1vh;
+    /* background-color: red; */
+    /* background-color:rgb(113, 218, 242); */
+
+    position: absolute;
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly; 
+    z-index: 2;
+    
+}
+
+.action_panel:hover{
+    cursor: pointer;
+}
+
+.action_panel_element{
+    margin-top: 1.55%;
+    width: 18vh;
+    height: 14.5vh;
+
+    /* background-color: green; */
+    background-color:rgb(55, 86, 120);
+    background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(56, 88, 122));
+     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    /* padding-left: 1.55%;
+    padding-right: 1.55%; */
+   
+    /* box-shadow: 0px 1.5px 0px rgba(0, 0, 0 , 0.05); */
+}
+
+.action_panel_element:hover{
+    color: rgb(74, 191, 217);
+}
+
+.action_panel_element:active{
+    color: rgb(54, 85, 118);
+    background-color:rgb(113, 218, 242);
+}
+
+.element_active{
+    color: rgb(54, 85, 118);
+    background-color:rgb(113, 218, 242);
+}
+
+.element_active:hover{
+    color: rgb(54, 85, 118);
+    background-color: rgb(74, 191, 217);
+}
+
+.icon{
+    /* background: rgb(113, 218, 242); */
+    margin-top: 7.5%;
+    /* width: 8vh;
+    height: 8vh; */
+    mask-size: 100%;
+    transition: opacity 0.3s;
+}
+
+.element_active:hover > .icon {
+    background: rgb(74, 191, 217);
+}
+
+.element_active:active > .icon{
+    background: rgb(65, 105, 147);
+}
+
+
+
+.default_class{
+    display: flex;
+    position: absolute;
+    width: 8vh;
+    height: 8vh;
+    margin-top: 5.55%;
+    margin-left: -10%;
+
+    /* margin-top: 9.2%;
+    width: 43%;
+    height: 31.5%; */
+    
+    /* flex-direction: row; */
+    /* color: rgb(113, 218, 242); */
+    
+    /* text-align: center; */
+    /* justify-content: space-between;
+    font-size: 90% */
+}
+
+
+
+
+
+.midi_map_class{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    width: 100%;
+
+    margin-top: 6%;
+    z-index: 1;
+}
+
+.notes_or_beats{
+    border: solid;
+    border-width: 2px;
+
+    color: rgb(113, 218, 242);
+    background:rgb(56, 88, 122);
+    border-color: rgb(113, 218, 242);
+
+    width: 100%;
+    margin: 0.35vh;
+    padding-right: 0.9vh;
+    padding-left: 0.8vh;
+    padding-top: 0.7vh;
+    padding-bottom:0.7vh;
+    z-index: 1;
+    text-align: center;
+}
+
+.notes_or_beats:hover{
+    cursor: pointer;
+    color: rgb(74, 191, 217);
+    border-color: rgb(74, 191, 217);
+
+}
+
+.notes_or_beats:active {
+    color: rgb(56, 88, 122);
+    background-color: rgb(113, 218, 242);
+    border-color: rgb(113, 218, 242);
+}
+
+.map{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    margin-top: -1.5%;
+    margin-left: 0.75%;
+    width: 50vh;
+    height: 13.5vh;
+
+    /* background: red; */   
+}
+
+.map_row{
+    width: 97.8%;
+    height: 4.8vh;
+
+    /* background-color: blue; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 1%;
+
+    margin-left: 0.6vh;
+}
+
+.map_elements{
+    width: 100%;
+    height: 4vh;
+    font-size: 90%;
+
+    padding-top: 0.6vh;
+    margin-top: 0.5vh;
+
+    /* padding-left: 0.05vh;
+    padding-right: 0.05vh; */
+    text-align: center;
+
+    color: rgb(56, 88, 122);
+    background: rgb(113, 218, 242);
+    border-color: rgb(113, 218, 242);
+
+    cursor: pointer;
+}
+
+.midi_map_note_foreground{
+    background: rgb(113, 218, 242);
+    z-index: 1;
+}
+
+.midi_map_note_background{
+    border:solid;
+    border-width: 2.5px;
+    
+    background:rgb(56, 88, 122);
+    border-color: rgb(113, 218, 242);
+
+    width: 1vh;
+    margin: 0.3vh;
+    padding-left: 1.5vh;
+    padding-right:2.3vh;
+    padding-top: 0.4vh;
+    padding-bottom:0.4vh;
+    z-index: 1;
+}
+
+.midi_map_note_background:hover {
+    cursor: pointer;
+    border-color: rgb(74, 191, 217);
+}
+
+.midi_map_note_background:hover > .midi_map_note_foreground {
+    background: rgb(74, 191, 217);
+}
+
+.midi_map_note_background:active {
+    background-color: rgb(113, 218, 242);
+    border-color: rgb(113, 218, 242);
+}
+
+.midi_map_note_background:active > .midi_map_note_foreground{
+    background: rgb(65, 105, 147);
+}
+
+
+
+
+
+.input_field {
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+
+    width: 81vh;
+    height: 8vh;
+    margin-top: 12.2%;
+
+    color: rgb(29, 156, 185);
+    background: rgb(56, 88, 122);
+    border: solid;
+    border-color: rgb(113, 218, 242);
+}
+
+.input_field:hover {
+    cursor: pointer;
+    color: rgb(6, 131, 160);
+    border-color: rgb(74, 191, 217);
+}
+
+.input_field:active {
+    cursor: pointer;
+    color: rgb(113, 218, 242);
+    border-color: rgb(113, 218, 242);
+}
+
+
+
+
+
+.chord_recognition_patterns{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding-top: -3vh;
+    margin-top: 3.95%;
+    width: 70vh;
+    height: 14vh;
+
+    color: rgb(113, 218, 242);
+}
+
+.chord_recognition_patterns_row{
+    width: 100%;
+    height: 4.32vh;
+
+    border-left: solid;
+    border-right: solid;
+    border-bottom: solid;
+    border-width: 2px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1%;
+
+    text-align: center;
+}
+
+.chord_recognition_patterns_element{
+    color: rgb(113, 218, 242);
+    height: 4vh;
+    margin-top: 0vh;
+    padding-top: 0.4vh;
+    font-size: 90%;
+}
+
+.chord_recognition_patterns_element:hover{
+    cursor: pointer;
+    color: rgb(6, 131, 160);
+}
+
+.chord_recognition_patterns_element:active{
+    color: rgb(65, 105, 147);
+    background: rgb(113, 218, 242);
+}
+
+.chord_recognition_patterns_element_active{
+    color: rgb(65, 105, 147);
+    background: rgb(113, 218, 242);
+}
+
+/* width */
+.chord_recognition_patterns::-webkit-scrollbar {
+    width: 2.5vh;
+    padding-top: 0.4vh;
+    font-size: 90%;
+  }
+  
+  /* Track */
+.chord_recognition_patterns::-webkit-scrollbar-track {
+    background: transparent;
+    border: solid;
+    border-width: 2px;
+    border-color: rgb(113, 218, 242);
+    margin-top: -0.3vh;
+  }
+  
+  /* Handle */
+.chord_recognition_patterns::-webkit-scrollbar-thumb {
+    background: rgb(113, 218, 242);
+  }
+  
+  /* Handle on hover */
+.chord_recognition_patterns::-webkit-scrollbar-thumb:hover {
+    background: rgb(74, 191, 217);
+  }
+
+.chord_recognition_patterns::-webkit-scrollbar-thumb:active {
+    background: rgb(113, 218, 242);
+}

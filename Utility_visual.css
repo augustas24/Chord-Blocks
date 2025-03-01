@@ -1,0 +1,35 @@
+.utility_bar{
+    width: 35%; 
+    height: 4.5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(86, 85, 77);
+    position:absolute;
+    /* margin-top: 27.95vh; */
+    opacity: 0%;
+    transition: opacity 0.18s;
+    z-index: 3;
+    /* display: none; */
+    box-shadow: 0px 3px 3px rgba(0, 0.1, 0.1 , 0.1);
+}
+
+.utility_button{
+    height: 4.5vh;
+    background-color: rgb(86, 85, 77);
+    cursor: pointer;
+    border: solid;
+    border-color: rgb(86, 85, 77);
+    border-width: 2px;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.utility_button:hover{
+    background-color: rgb(107, 106, 98);
+    border-color: rgb(107, 106, 98);
+}
+
+.utility_button:active{
+    border-color: white;
+}
