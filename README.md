@@ -2,7 +2,8 @@
 This project is currently in progress and demonstrations of features will be uploaded when they are complete.
 
 ## Current look of the project:
-![Chord Blocks screenshot 1](https://github.com/user-attachments/assets/097d37da-e42c-48a0-a90b-954cdf85c88d)
+![screenshot_4](https://github.com/user-attachments/assets/867ec819-2e11-4af7-bb02-f8e1115d764e)
+
 
 ## Simple demonstration of the project in action:
 
